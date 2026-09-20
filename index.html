@@ -112,6 +112,239 @@
 <style id="fast-loader">
 #pageLoader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:radial-gradient(circle at 50% 42%,#8f183b 0,#650d25 48%,#300611 100%);color:#fff;transition:opacity .55s ease,visibility .55s ease}#pageLoader.ready{opacity:0;visibility:hidden;pointer-events:none}.loader-inner{text-align:center;width:min(86vw,420px);padding:28px}.loader-ring{width:42px;height:42px;margin:0 auto 20px;border:2px solid #ffffff25;border-top-color:#e0b45d;border-right-color:#e0b45d;border-radius:50%;animation:loaderSpin .8s linear infinite}.loader-bengali{font-family:"Noto Serif Bengali",serif;font-size:34px;color:#f4ce82}.loader-names{font-family:"Cormorant Garamond",serif;font-size:21px;color:#f7dfab;margin-top:3px}.loader-line{height:3px;width:100%;margin:20px auto 10px;background:#ffffff18;border-radius:99px;overflow:hidden}.loader-line i{display:block;width:35%;height:100%;background:#e0b45d;border-radius:99px;animation:loaderSweep 1.1s ease-in-out infinite}.loader-text{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#f5d6a4}@keyframes loaderSpin{to{transform:rotate(360deg)}}@keyframes loaderSweep{0%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
 </style>
+
+<style id="final-mobile-fit">
+/* FINAL MOBILE WIDTH LOCK
+   This CSS is intentionally scoped to layout/overflow only.
+   It does not change the wedding content, music, animations, or interactions.
+*/
+html, body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+img, video, canvas, svg {
+  max-width: 100% !important;
+}
+
+button, input, select, textarea {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+main, header, footer, nav, section, .wrap, .hero, .enter,
+.hero-content, .enter-inner, .stage, .lovebox, .rsvp {
+  max-width: 100%;
+}
+
+.wrap {
+  width: 100%;
+}
+
+.grid, .jokes, .schedule, .intro, .count-grid {
+  width: 100%;
+  min-width: 0;
+}
+
+.grid > *, .jokes > *, .schedule > *, .count-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, p, a, span, strong, b, .lead, .quote,
+.verdict, .cuttext, .special, .venue {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.venue strong {
+  display: inline-block;
+  max-width: 100%;
+}
+
+@media (max-width: 800px) {
+  html, body {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  .nav {
+    width: 100vw;
+    max-width: 100vw;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-actions {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-actions .btn {
+    max-width: 100%;
+  }
+
+  .intro {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .grid, .jokes, .schedule {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .count-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .count {
+    width: 100%;
+    min-width: 0 !important;
+    max-width: 100%;
+  }
+
+  .venue {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .stage {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden;
+  }
+
+  .rsvp, .lovebox {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .rsvp > *, .lovebox > * {
+    max-width: 100%;
+  }
+
+  .rsvp > div[style*="display:flex"] {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #rsvpYes, #rsvpNo {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .enter {
+    width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+  .enter-inner {
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
+    margin: 0 auto;
+  }
+
+  .enter-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .intro-progress {
+    max-width: 100%;
+  }
+
+  .card-shell {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-shell img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .navlinks {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .wrap {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .hero-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .enter-inner {
+    width: calc(100vw - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .count-grid {
+    gap: 7px !important;
+  }
+
+  .count {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div id="pageLoader" aria-label="Loading wedding invitation">
@@ -444,61 +677,3 @@ if(musicButton)musicButton.onclick=()=>{
 </script>
 </body>
 </html
-    /* FINAL MOBILE RESPONSIVE POLISH */
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{width:100%;max-width:100%;overflow-x:hidden}
-    img,video,canvas,svg{max-width:100%;height:auto}
-    button,input,select{max-width:100%;box-sizing:border-box}
-    .wrap{width:100%;padding-left:clamp(14px,5vw,24px);padding-right:clamp(14px,5vw,24px)}
-    .hero-content,.enter-inner,.lovebox,.rsvp,.stage{max-width:100%}
-    @media(max-width:600px){
-      body{font-size:15px}
-      section{padding:56px 0!important}
-      .wrap{padding-left:16px;padding-right:16px}
-      h1,h2,h3{overflow-wrap:anywhere}
-      .hero-content{padding:90px 16px 55px}
-      .hero-content h1{font-size:clamp(40px,14vw,64px);line-height:.95}
-      .sub{font-size:17px!important}
-      .lead{font-size:14px;line-height:1.65}
-      .intro{gap:22px}
-      .card-shell{margin:0 auto;max-width:100%}
-      .card-shell img{width:100%;height:auto}
-      .count-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
-      .count{padding:15px 8px!important;border-radius:16px!important;min-width:0}
-      .count strong{font-size:clamp(24px,8vw,38px)}
-      .count span{font-size:11px}
-      .stage{height:300px!important;width:100%;border-radius:22px}
-      .curtain{width:27%}
-      .bird{font-size:48px!important;bottom:65px}
-      .badam{left:7%!important}.moyna{right:7%!important}
-      .stage.open .badam{left:29%!important}.stage.open .moyna{right:29%!important}
-      .ribbon{width:68%;max-width:300px;bottom:72px;height:8px}
-      .scissors{font-size:46px;bottom:43px}
-      .cuttext{font-size:20px;line-height:1.25;padding:0 12px}
-      .lovebox,.rsvp{padding:22px 16px!important;border-radius:22px!important}
-      .lovebox input,input,select{font-size:16px!important}
-      .ring{width:130px;height:130px}
-      .ring span{font-size:34px}
-      #rsvpYes,#rsvpNo{width:100%;min-width:0!important;margin:5px 0}
-      #rsvpReply{font-size:21px!important;line-height:1.35}
-      .enter-inner{width:calc(100vw - 28px);padding:24px 16px!important;border-radius:24px}
-      .enter .bengali{font-size:clamp(40px,14vw,64px)}
-      .bengali-names{font-size:21px}
-      .enter h1{font-size:clamp(38px,13vw,62px);line-height:.95}
-      .enter-btn{width:100%;min-width:0!important;font-size:14px;padding:14px 12px}
-      .intro-progress{width:82vw}
-      .venue{display:block!important}
-      .venue>*{max-width:100%}
-    }
-    @media(max-width:360px){
-      .wrap{padding-left:12px;padding-right:12px}
-      section{padding:48px 0!important}
-      .stage{height:270px!important}
-      .bird{font-size:42px!important}
-      .scissors{font-size:40px}
-      .cuttext{font-size:18px}
-      .enter-inner{width:calc(100vw - 20px);padding:20px 12px!important}
-      .enter h1{font-size:38px}
-      .enter .bengali{font-size:40px}
-    }
->
